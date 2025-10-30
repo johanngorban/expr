@@ -1,17 +1,17 @@
 cmake_minimum_required(VERSION 3.16)
-project(mathexpr)
+project(expr)
 
 set(CMAKE_CXX_STANDARD 17)
 
-file(GLOB_RECURSE CALCULATION_SOURCES
-    ${CMAKE_CURRENT_SOURCE_DIR}/source/*.cpp
+file(GLOB_RECURSE MATHEXPR_SOURCES
+    ${CMAKE_CURRENT_SOURCE_DIR}/*.cpp
 )
 
-add_library(mathexpr STATIC
-    ${CALCULATION_SOURCES}
+add_library(expr STATIC
+    ${MATHEXPR_SOURCES}
 )
 
-target_include_directories(mathexpr
+target_include_directories(expr
     PUBLIC
-        ${CMAKE_CURRENT_SOURCE_DIR}/include
+        ${CMAKE_CURRENT_SOURCE_DIR}
 )
